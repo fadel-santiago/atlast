@@ -1,0 +1,44 @@
+.venv/
+.release-venv/
+.atlast/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Local vector databases and downloaded model artifacts
+qdrant_storage/
+models/
+.cache/
+*.onnx
+*.safetensors
+pytorch_model*.bin
+*.gguf
+*.ckpt
+*.pt
+*.pth
+
+# Local uploads and private working documents
+uploads/
+local_documents/
+private_documents/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/

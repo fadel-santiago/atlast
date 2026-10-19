@@ -1,0 +1,1 @@
+The Helios warehouse performs inventory reconciliation at midnight on the final calendar day of each month. Damaged packages are moved to the amber inspection bay.

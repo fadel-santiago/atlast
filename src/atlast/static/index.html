@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Local document intelligence with grounded, traceable answers." />
+    <title>ATLAST — Knowledge Archive</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="star-field" aria-hidden="true"></div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="ATLAST home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" role="img">
+              <path d="M20 4 34 33H6L20 4Z" />
+              <path d="M13 27h14M16 21h8" />
+            </svg>
+          </span>
+          <span class="brand-word">ATLAST</span>
+          <span class="brand-tag">Knowledge archive</span>
+        </a>
+        <div class="header-meta">
+          <span class="model-chip" id="model-chip">Model · connecting</span>
+          <div class="system-status" id="health-status" role="status">
+            <span class="status-dot"></span>
+            <span>Connecting</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy-block">
+            <p class="eyebrow"><span aria-hidden="true">✦</span> Private intelligence, illuminated</p>
+            <h1 id="page-title">Enter the archive.<br /><span>Reveal what matters.</span></h1>
+            <p class="hero-copy">
+              Transform local documents into grounded answers. Every response is drawn from
+              inspectable evidence, validated before it reaches you.
+            </p>
+            <div class="hero-pills" aria-label="Core capabilities">
+              <span>Local-first</span><span>Persistent vectors</span><span>Validated citations</span>
+            </div>
+          </div>
+
+          <aside class="archive-orbit" aria-label="Live archive summary">
+            <div class="orbit-ring orbit-ring-outer" aria-hidden="true"></div>
+            <div class="orbit-ring orbit-ring-inner" aria-hidden="true"></div>
+            <div class="orbit-core">
+              <span class="orbit-value" id="hero-documents">—</span>
+              <span class="orbit-label">indexed sources</span>
+            </div>
+            <span class="orbit-node node-one" aria-hidden="true"></span>
+            <span class="orbit-node node-two" aria-hidden="true"></span>
+            <div class="orbit-caption">
+              <span class="mini-sigil" aria-hidden="true">◇</span>
+              <span><strong>Local constellation</strong><small id="hero-model">Awaiting system details</small></span>
+            </div>
+          </aside>
+        </section>
+
+        <section class="flow-panel" id="system-flow" aria-labelledby="flow-title">
+          <div class="flow-header">
+            <div>
+              <p class="step-label">Live system flow</p>
+              <h2 id="flow-title">Inside the archive</h2>
+              <p>Request-level confirmations from the real local pipeline—never simulated timings.</p>
+            </div>
+            <div class="flow-tabs" role="tablist" aria-label="Pipeline view">
+              <button class="flow-tab active" id="ingestion-tab" type="button" role="tab" aria-selected="true" aria-controls="flow-content" data-pipeline="ingestion">Ingestion</button>
+              <button class="flow-tab" id="qa-tab" type="button" role="tab" aria-selected="false" aria-controls="flow-content" data-pipeline="qa">Question answering</button>
+            </div>
+          </div>
+
+          <div class="flow-content" id="flow-content" role="tabpanel" aria-live="polite">
+            <div class="flow-state-row">
+              <span class="flow-state idle" id="flow-state"><span></span>Idle</span>
+              <p id="flow-summary">Choose a document to awaken the ingestion pipeline.</p>
+            </div>
+            <ol class="pipeline" id="flow-stages" aria-label="Ingestion stages"></ol>
+            <div class="trace-console">
+              <div class="trace-heading">
+                <span><i aria-hidden="true"></i> Confirmed runtime facts</span>
+                <small id="trace-scope">No request observed</small>
+              </div>
+              <dl class="trace-facts" id="flow-facts"></dl>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace" aria-label="ATLAST workspace">
+          <article class="panel upload-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="step-label">01 · Source vault</p>
+                <h2>Add knowledge</h2>
+              </div>
+              <span class="file-limit" id="file-limit">PDF / TXT</span>
+            </div>
+
+            <label class="drop-zone" id="drop-zone" for="file-input">
+              <input id="file-input" type="file" accept=".pdf,.txt,application/pdf,text/plain" multiple />
+              <span class="upload-icon" aria-hidden="true">
+                <svg viewBox="0 0 28 28"><path d="M14 19V6m0 0-5 5m5-5 5 5M6 18v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" /></svg>
+              </span>
+              <strong>Open a passage into the archive</strong>
+              <span>Drop PDF or TXT files, or browse this machine</span>
+            </label>
+            <div class="upload-list" id="upload-list" aria-live="polite"></div>
+
+            <div class="document-library" id="document-library">
+              <div class="library-heading">
+                <div>
+                  <p class="mini-label">Archive inventory</p>
+                  <h3>Indexed documents <span id="document-count">0</span></h3>
+                </div>
+                <button class="text-button" id="refresh-documents" type="button">Refresh</button>
+              </div>
+              <div class="message" id="document-message" role="status" hidden></div>
+              <div class="document-list" id="document-list" aria-live="polite">
+                <p class="empty-state">Reading the local archive…</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel question-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="step-label">02 · Oracle</p>
+                <h2>Question the archive</h2>
+              </div>
+              <span class="grounded-label"><i aria-hidden="true"></i> Evidence bound</span>
+            </div>
+
+            <form id="ask-form">
+              <label for="question-input" class="sr-only">Question</label>
+              <div class="question-field">
+                <span aria-hidden="true">⌁</span>
+                <textarea
+                  id="question-input"
+                  name="question"
+                  rows="4"
+                  maxlength="4000"
+                  placeholder="What truth should the archive reveal?"
+                  required
+                ></textarea>
+              </div>
+              <div class="question-footer">
+                <span>Only retrieved evidence enters the context.</span>
+                <button class="primary-button" id="ask-button" type="submit">
+                  <span>Reveal answer</span><span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </form>
+            <div class="message" id="question-message" role="alert" hidden></div>
+          </article>
+        </section>
+
+        <section class="answer-section" id="answer-section" aria-live="polite" hidden>
+          <div class="answer-heading">
+            <div>
+              <p class="step-label">03 · Grounded response</p>
+              <h2>The archive answers</h2>
+            </div>
+            <span class="answer-status" id="answer-status"></span>
+          </div>
+          <blockquote class="answer-text" id="answer-text"></blockquote>
+          <div class="citation-area" id="citation-area" hidden>
+            <div class="citation-heading">
+              <div>
+                <p class="mini-label">Validated evidence</p>
+                <h3>Source constellation</h3>
+              </div>
+              <span id="citation-count">0 citations</span>
+            </div>
+            <div id="citation-list"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span><i aria-hidden="true"></i> Runs on this machine</span>
+        <span>Documents · vectors · generation remain local</span>
+      </footer>
+    </div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

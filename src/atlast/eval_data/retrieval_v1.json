@@ -1,0 +1,59 @@
+{
+  "name": "atlast-synthetic-retrieval-v1",
+  "documents": [
+    "documents/orion_handbook.txt",
+    "documents/verdant_policy.txt",
+    "documents/coastal_research.txt",
+    "documents/helios_operations.txt"
+  ],
+  "cases": [
+    {
+      "id": "orion-checkpoint",
+      "question": "When does Project Orion hold its weekly checkpoint?",
+      "answerable": true,
+      "relevant_passages": [{"filename": "orion_handbook.txt", "section": 1}]
+    },
+    {
+      "id": "orion-release-controls",
+      "question": "What approvals are required before an Orion deployment?",
+      "answerable": true,
+      "relevant_passages": [{"filename": "orion_handbook.txt", "section": 1}]
+    },
+    {
+      "id": "verdant-rail-cap",
+      "question": "What is the maximum Verdant rail travel reimbursement?",
+      "answerable": true,
+      "relevant_passages": [{"filename": "verdant_policy.txt", "section": 1}]
+    },
+    {
+      "id": "verdant-bicycle-allowance",
+      "question": "How much may a bicycle commuter claim for quarterly maintenance?",
+      "answerable": true,
+      "relevant_passages": [{"filename": "verdant_policy.txt", "section": 1}]
+    },
+    {
+      "id": "coastal-sampling",
+      "question": "How frequently does the coastal sensor array sample salinity?",
+      "answerable": true,
+      "relevant_passages": [{"filename": "coastal_research.txt", "section": 1}]
+    },
+    {
+      "id": "coastal-calibration",
+      "question": "When is the coastal sensor array calibrated?",
+      "answerable": true,
+      "relevant_passages": [{"filename": "coastal_research.txt", "section": 1}]
+    },
+    {
+      "id": "unanswerable-cafeteria",
+      "question": "What time does the cafeteria close on Fridays?",
+      "answerable": false,
+      "relevant_passages": []
+    },
+    {
+      "id": "unanswerable-founder",
+      "question": "Who founded the organization?",
+      "answerable": false,
+      "relevant_passages": []
+    }
+  ]
+}

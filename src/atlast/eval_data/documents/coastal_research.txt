@@ -1,0 +1,1 @@
+The coastal sensor array samples salinity every fifteen minutes and retains raw readings for ninety days. Calibration is performed on the first Monday of each month using certified reference water.

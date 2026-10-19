@@ -1,0 +1,4 @@
+ATLAST turns source documents into searchable chunks.
+Deterministic indexing makes retrieval quality easier to test and reproduce.
+
+Local vector storage keeps this foundation usable without a hosted service.

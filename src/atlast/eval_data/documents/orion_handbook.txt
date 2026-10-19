@@ -1,0 +1,1 @@
+Project Orion holds its weekly checkpoint every Tuesday at 09:30. The project lead records blockers in the launch ledger. Before any Orion deployment, two reviewers must approve the release and the rollback checklist must be signed.
